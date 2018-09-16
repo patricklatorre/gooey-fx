@@ -6,35 +6,35 @@ import javafx.scene.Scene;
 
 import java.io.IOException;
 
-public class FXSection
+public class Gooey
 {
 	protected Scene screen;
 	protected Parent layout;
 	protected FXController controller;
 
-	public FXSection() {
+	public Gooey() {
 		layout = null;
 		controller = null;
 		screen = null;
 	}
 
 	/**
-	 * Factory method for creating an FXSection
+	 * Factory method for creating an Gooey
 	 * with null fields
 	 *
-	 * @return FXSection with null fields
+	 * @return Gooey with null fields
 	 * */
-	public static FXSection create() {
-		return new FXSection();
+	public static Gooey create() {
+		return new Gooey();
 	}
 
 	/**
 	 * Sets the parent of the section via the
 	 * project path URL of the respective FXML
 	 *
-	 * @return FXSection with a bound parent
+	 * @return Gooey with a bound parent
 	 * */
-	public FXSection fromFXML(String URL) {
+	public Gooey fromFXML(String URL) {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(URL));
 		this.layout = null;
 
@@ -55,9 +55,9 @@ public class FXSection
 	 *
 	 * @param width width of scene
 	 * @param height height of scene
-	 * @return FXSection with a bound scene
+	 * @return Gooey with a bound scene
 	 * */
-	public FXSection withScreen(double width, double height) {
+	public Gooey withScreen(double width, double height) {
 		screen = new Scene(layout, width, height);
 		return this;
 	}

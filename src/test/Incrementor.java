@@ -1,6 +1,6 @@
 package test;
 
-import com.sectionfx.FXSection;
+import com.sectionfx.Gooey;
 import javafx.stage.Stage;
 
 public class Incrementor
@@ -17,7 +17,7 @@ public class Incrementor
 		window.setTitle("Incrementor");
 
 		// Create section for incrementor.fxml
-		FXSection section = FXSection.create()
+		Gooey section = Gooey.create()
 				.fromFXML("/test/incrementor.fxml")
 				.withScreen(250, 120);
 
