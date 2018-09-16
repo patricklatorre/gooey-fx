@@ -1,7 +1,6 @@
-package test;
-
 import javafx.application.Application;
 import javafx.stage.Stage;
+import test.Incrementor;
 
 public class TestApp extends Application
 {
