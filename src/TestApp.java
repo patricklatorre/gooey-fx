@@ -10,10 +10,6 @@ public class TestApp extends Application
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// Instantiate app
-		Incrementor app = new Incrementor();
-
-		// Show app
-		app.show();
+		Incrementor.show();
 	}
 }

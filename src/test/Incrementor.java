@@ -5,24 +5,13 @@ import javafx.stage.Stage;
 
 public class Incrementor
 {
-	private Stage window;
-
-	/**
-	 * Shows an app that simply increments a
-	 * number upon clicking a button
-	 * */
-	public void show() {
-		// Create window
-		window = new Stage();
-		window.setTitle("Incrementor");
-
+	public static void show() {
 		// Create gooey object for encapsulating incrementor.fxml and its controller
 		Gooey gooey = Gooey.create()
 				.fromFXML("/test/incrementor.fxml")
 				.withScreen(250, 120);
 
-
-		// Get incrementor.fxml's controller as 'ctrl'
+		// Get incrementor.fxml's controller as 'ctrl' (for ease of reference)
 		IncrementCtrl ctrl = gooey.getController(IncrementCtrl.class);
 
 		// Set functionality : increment number on (+) button click
@@ -30,10 +19,9 @@ public class Incrementor
 			ctrl.getNumber().setText("" + (Integer.parseInt(ctrl.getNumber().getText()) + 1));
 		});
 
-		// Attach the gooey to the window
+		// Create window, attach gooey to window, then show
+		Stage window = new Stage();
 		window.setScene(gooey.getScreen());
-
-		// Show window
 		window.showAndWait();
 	}
 }
