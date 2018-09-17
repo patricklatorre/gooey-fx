@@ -16,21 +16,22 @@ public class Incrementor
 		window = new Stage();
 		window.setTitle("Incrementor");
 
-		// Create section for incrementor.fxml
-		Gooey section = Gooey.create()
+		// Create gooey object for encapsulating incrementor.fxml and its controller
+		Gooey gooey = Gooey.create()
 				.fromFXML("/test/incrementor.fxml")
 				.withScreen(250, 120);
 
-		// Reference 'section' controller as 'ctrl'
-		IncrementCtrl ctrl = section.getController(IncrementCtrl.class);
 
-		// Increment text on (+) click
+		// Get incrementor.fxml's controller as 'ctrl'
+		IncrementCtrl ctrl = gooey.getController(IncrementCtrl.class);
+
+		// Set functionality : increment number on (+) button click
 		ctrl.getIncrementBtn().setOnAction(e -> {
 			ctrl.getNumber().setText("" + (Integer.parseInt(ctrl.getNumber().getText()) + 1));
 		});
 
-		// Set scene
-		window.setScene(section.getScreen());
+		// Attach the gooey to the window
+		window.setScene(gooey.getScreen());
 
 		// Show window
 		window.showAndWait();

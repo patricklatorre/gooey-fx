@@ -3,12 +3,12 @@ package test;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.sectionfx.FXController;
+import com.sectionfx.GooeyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class IncrementCtrl extends FXController
+public class IncrementCtrl extends GooeyController
 {
 
 	@FXML

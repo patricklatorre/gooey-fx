@@ -1,3 +1,13 @@
+/**
+ *
+ * @author Patrick Latorre
+ * @version 1.0.0
+ *
+ * Gooey
+ *
+ * @see com.sectionfx.GooeyController
+ * */
+
 package com.sectionfx;
 
 import javafx.fxml.FXMLLoader;
@@ -10,7 +20,7 @@ public class Gooey
 {
 	protected Scene screen;
 	protected Parent layout;
-	protected FXController controller;
+	protected GooeyController controller;
 
 	public Gooey() {
 		layout = null;
@@ -19,7 +29,7 @@ public class Gooey
 	}
 
 	/**
-	 * Factory method for creating an Gooey
+	 * Factory method for creating a Gooey
 	 * with null fields
 	 *
 	 * @return Gooey with null fields
@@ -85,7 +95,7 @@ public class Gooey
 	 *
 	 * @return bound controller of fxml
 	 * */
-	public <T extends FXController> T getController(Class<T> type) {
+	public <T extends GooeyController> T getController(Class<T> type) {
 		return (T) controller;
 	}
 }
